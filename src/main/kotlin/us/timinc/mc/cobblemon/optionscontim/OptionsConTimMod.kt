@@ -1,7 +1,6 @@
 package us.timinc.mc.cobblemon.optionscontim
 
 import com.cobblemon.mod.common.api.events.CobblemonEvents
-import net.neoforged.fml.common.EventBusSubscriber
 import net.neoforged.fml.common.Mod
 import us.timinc.mc.cobblemon.optionscontim.config.ConfigBuilder
 import us.timinc.mc.cobblemon.optionscontim.config.OptionsConTimConfig
@@ -15,7 +14,8 @@ object OptionsConTimMod {
 
     init {
         CobblemonEvents.THROWN_POKEBALL_HIT.subscribe { evt ->
-            if (!evt.pokemon.isBattling && !config.outOfBattleCaptures) evt.cancel()
+            val pokemon = evt.pokemon.pokemon
+            if (!evt.pokemon.isBattling && !config.outOfBattleCaptures.getValue(pokemon)) evt.cancel()
         }
     }
 }
