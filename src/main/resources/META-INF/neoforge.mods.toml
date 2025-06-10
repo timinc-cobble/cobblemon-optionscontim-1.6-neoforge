@@ -1,0 +1,33 @@
+modLoader = "kotlinforforge"
+loaderVersion = "[4,)"
+license = "MIT"
+
+[[mods]]
+modId = "optionscontim"
+version = "1.6-neoforge-0.0.0"
+displayName = "Options Con Tim"
+authors = "timinc aka Timothy Metcalfe"
+description = '''
+Everything you didn&#x27;t know you wanted to be configurable in Cobblemon.
+'''
+
+[[dependencies.optionscontim]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.21.1]"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.optionscontim]]
+modId = "neoforge"
+mandatory = true
+versionRange = "[21.1.66,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.optionscontim]]
+modId = "cobblemon"
+mandatory = true
+versionRange = "[1.6.0,1.7.0)"
+ordering = "AFTER"
+side = "BOTH"
