@@ -4,7 +4,7 @@ license = "MIT"
 
 [[mods]]
 modId = "optionscontim"
-version = "1.6-neoforge-0.0.0"
+version = "1.6-neoforge-1.0.0"
 displayName = "Options Con Tim"
 authors = "timinc aka Timothy Metcalfe"
 description = '''
